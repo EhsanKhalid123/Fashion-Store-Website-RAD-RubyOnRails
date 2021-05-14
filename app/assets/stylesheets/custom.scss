@@ -1,0 +1,124 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.center {
+  text-align: center;
+
+}
+
+.center h1 {
+  margin-bottom: 12px;
+
+}
+
+header nav a {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.navbar-nav > li > a {
+  line-height: 35px;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+
+}
+
+
+#logo {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -1px;
+  float: left;
+  margin-right: 10px;
+  padding-top: 9px;
+  font-size: 2.2em;
+  color: #fff;
+
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+
+}
+
+footer a {
+  color: #555;
+
+}
+
+footer a:hover {
+  color: #222;
+
+}
+
+footer small {
+  float: left;
+
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+
+}
+
+#add {
+  margin-left: 80px;
+}
+
+#text {
+  margin-left: 40px;
+}
+
+#mencoat {
+
+}
+
+#divpop1 {
+  border: 2px solid #555;
+  float: left;
+}
+
+.divpop2 {
+  border: 2px solid #555;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.center-block {
+  display: block;
+  padding-left: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    // padding: 10px 15px;
+    padding: 10px 10px;
+}

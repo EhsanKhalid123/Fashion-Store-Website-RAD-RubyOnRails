@@ -1,0 +1,24 @@
+
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "Fashion Store", '#', id: "logo"%>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to"Home",   home_url%></li>
+        <li><%= link_to"Men",   men_url%></li>
+        <li><%= link_to"Women", women_url%></li>
+        <li><%= link_to"Kids", kids_url%></li>
+        <li><%= link_to"New-ins", new_url%></li>
+        <!--li><!%= link_to "#{image_tag("cart.png", :alt => "cart icon", :size => "50x50")}".html_safe, cart_url %></li>-->
+        <li><%= link_to image_tag('cart.png', :alt => "cart icon", :size => "40x40"), cart_url %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<p>&nbsp</p>
+<p>&nbsp</p>
+<p>&nbsp</p>
+
+
+

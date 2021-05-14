@@ -1,0 +1,51 @@
+
+<div class="center jumbotron">
+    <h1>Online Fashion Store</h1>
+    <h2>Welcome, Shop with us Online and Buy Clothes
+    <!--<a href="https://www.rmit.edu.au/"> Visit me here</a>--></h2>
+    <p><%= link_to "Login now!", '#', class: "btn btn-lg btn-primary" %></p>
+</div>
+
+<!--<h1>Online Fashion Store</h1>-->
+
+<!--<h1> Shopping Cart <!%= @mencoat %> </h1>-->
+<!--<a href=cart><!%= image_tag("cart.png", :alt => "cart icon", :size => "50x50",) %></a>-->
+<p>&nbsp</p>
+
+<h2>Popular</h2>
+
+<div class="center-block">
+    <%= form_tag action: 'index' do %>
+    <div class="divpop2">
+    <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
+    <!--%= text_field_tag 'mencoat', @mencoat %-->
+    <p id="text">Blue Mens Coat $29.99</p>
+    <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+    <% end %>
+
+    <div class="divpop2">
+    <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
+    <!--%= text_field_tag 'mencoat', @mencoat %-->
+    <p id="text">Blue Mens Coat $29.99</p>
+    <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+        <div class="divpop2">
+    <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
+    <!--%= text_field_tag 'mencoat', @mencoat %-->
+    <p id="text">Blue Mens Coat $29.99</p>
+    <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+        <div class="divpop2">
+    <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
+    <!--%= text_field_tag 'mencoat', @mencoat %-->
+
+    <p id="text">Blue Mens Coat $29.99</p>
+    <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+</div>
+
+
