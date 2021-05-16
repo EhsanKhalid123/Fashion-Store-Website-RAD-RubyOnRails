@@ -15,37 +15,39 @@
 <h2>Popular</h2>
 
 <div class="center-block">
-    <%= form_tag action: 'index' do %>
     <div class="divpop2">
-    <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
-    <!--%= text_field_tag 'mencoat', @mencoat %-->
-    <p id="text">Blue Mens Coat $29.99</p>
-    <%= submit_tag 'Add to Cart', :id => 'add' %>
+      <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Blue Mens Coat $29.99</b></p>
+      <% if session[:saved_list].include?(:mencoat.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :mencoat, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :mencoat), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
     </div>
-    <% end %>
 
     <div class="divpop2">
-    <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
-    <!--%= text_field_tag 'mencoat', @mencoat %-->
-    <p id="text">Blue Mens Coat $29.99</p>
-    <%= submit_tag 'Add to Cart', :id => 'add' %>
+      <%= image_tag("womenscoat.png", :alt => "coat image", :size => "250x250", :name => 'womenscoat', :id => 'womenscoat') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Yellow Womens Coat $29.99</b></p>
+      <%= submit_tag 'Save', :id => 'save' %><%= submit_tag 'Add to Cart', :id => 'add' %>
     </div>
 
-        <div class="divpop2">
-    <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
-    <!--%= text_field_tag 'mencoat', @mencoat %-->
-    <p id="text">Blue Mens Coat $29.99</p>
-    <%= submit_tag 'Add to Cart', :id => 'add' %>
+    <div class="divpop2">
+      <%= image_tag("pinkGirlsJacket.png", :alt => "coat image", :size => "250x250", :name => 'pinkGirlsJacket', :id => 'pinkGirlsJacket') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Pink Girls Jacket $29.99</b></p>
+      <%= submit_tag 'Save', :id => 'save' %><%= submit_tag 'Add to Cart', :id => 'add' %>
     </div>
 
-        <div class="divpop2">
-    <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
-    <!--%= text_field_tag 'mencoat', @mencoat %-->
+    <div class="divpop2">
+      <%= image_tag("RedHoodie.png", :alt => "coat image", :size => "250x250", :name => 'RedHoodie', :id => 'RedHoodie') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
 
-    <p id="text">Blue Mens Coat $29.99</p>
-    <%= submit_tag 'Add to Cart', :id => 'add' %>
+      <p id="text"><b>Red Hoodie $29.99</b></p>
+      <%= submit_tag 'Save', :id => 'save' %><%= submit_tag 'Add to Cart', :id => 'add' %>
     </div>
-
 </div>
 
 

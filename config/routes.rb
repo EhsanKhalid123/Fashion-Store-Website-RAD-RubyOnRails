@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  resources :products
+
+  # get 'save/list'
   # get 'save_list/shoppingCart'
   # get 'new_ins/clothing'
   # get 'women/clothing'
@@ -11,6 +15,9 @@ Rails.application.routes.draw do
   get 'women' => 'women#clothing'
   get 'new' => 'new_ins#clothing'
   get 'cart' => 'cart#show'
+  get 'save' => 'save#list'
+
+  resource :saved_list, only: [:update, :show]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,0 +1,8 @@
+
+<% @saved_products.each do |saved_product| %>
+  <%#= saved_product %>
+  <%= image_tag(saved_product[:image], :alt => saved_product[:alt], :size => "250x250", :name => saved_product[:name], :id => saved_product[:id]) %>
+  <!--%= text_field_tag 'mencoat', @mencoat %-->
+  <p id="text"><b><%= saved_product[:text] %></b></p>
+  <%= submit_tag 'Add to Cart', :id => 'add' %>
+<% end %>
