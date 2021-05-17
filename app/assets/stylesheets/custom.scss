@@ -57,7 +57,7 @@ footer {
 
 }
 
-footer a {
+footer > a {
   color: #555;
 
 }
@@ -102,16 +102,18 @@ footer ul li {
 
 }
 
-#divpop1 {
+.divpop1 {
   border: 2px solid #555;
-  float: left;
+  display: inline-block;
+  // margin-left: 40%;
 }
 
 .divpop2 {
   border: 2px solid #555;
-  float: left;
+  // float: left;
   margin-left: auto;
   margin-right: auto;
+  display: inline-block;
 
 }
 
@@ -127,4 +129,77 @@ footer ul li {
     display: block;
     // padding: 10px 15px;
     padding: 10px 10px;
+}
+
+.center jumbotron > btn btn-lg btn-primary > a {
+  color:red;
+}
+
+.collections1 {
+    // position: absolute;
+    display: inline-block;
+    float: left;
+    justify-content: space-around;
+    // background-color: #555555;
+    // width: 0%;
+    margin: 40px;
+    text-align: center;
+    border: 6rem solid #555555
+}
+
+// .collections1:hover {
+//     // position: absolute;
+//     display: inline-block;
+//     float: left;
+//     justify-content: space-around;
+//     // background-color: #555555;
+//     // width: 0%;
+//     margin: 20px;
+//     text-align: center;
+//     border: 6rem solid #555555
+// }
+
+
+.collections2 {
+    position: absolute;
+    justify-content: space-around;
+    background-color: #555555;
+    margin-left: 17%;
+    // width: 0%;
+    border: 6rem solid #555555
+}
+
+.collections3 {
+    position: absolute;
+    justify-content: space-around;
+    background-color: #555555;
+    margin-left: 36%;
+    // width: 0%;
+    border: 6rem solid #555555;
+}
+
+.collections4 {
+    position: absolute;
+    justify-content: space-around;
+    background-color: #555555;
+    margin-left: 55%;
+    // width: 0%;
+    border: 6rem solid #555555;
+}
+
+.collectionsAll {
+    // position: absolute;
+    // justify-content: space-around;
+    // background-color: #555555;
+    // margin-left: 95%;
+    // width: 0%;
+    // float: right;
+}
+
+.border{
+  border-top:2px dashed #322f32;
+  color:#fff;
+  background-color:#fff;
+  height:2px;
+  width:100%;
 }

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :products
 
+  resources :products
+  # get 'see/collections'
   # get 'save/list'
   # get 'save_list/shoppingCart'
   # get 'new_ins/clothing'
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
   get 'new' => 'new_ins#clothing'
   get 'cart' => 'cart#show'
   get 'save' => 'save#list'
+  get 'seeAll' => 'see#collections'
 
   resource :saved_list, only: [:update, :show]
 
