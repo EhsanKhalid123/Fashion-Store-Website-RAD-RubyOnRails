@@ -1,9 +1,16 @@
-Name: Ehsan Khalid,  student number: s3838975
+Name: Ehsan Khalid,  Student number: s3838975  Name: Jay Verma, Student Number: s3849223
 Highest Level Attempted: CR
 
 Ehsan Khalid:
-Made the Design: 2 Days
-Made The Functionalities: 5 Days
+Header: 2 Hours
+Footer: 2 Hours
+Designed Home Page: 4 Hours
+Designed All Collections Page: 7 Hours
+Save List Functionality: 3 Days
+All Collections Page: 3 Hours
+Front Page Random Item Displays: 3 Hours
+Newsletter Functionality:
+Login Functionality:
 
 
 Heroku deployment URL and the last Heroku deployment log
