@@ -1,9 +1,20 @@
 
+<center><h2 style="font-size: 30px; color: black;">Save List</h2>
+<p>All of your saved items will appear here:</p>
+<div class="border"></div></center>
+<p>&nbsp;</p>
 <% @saved_products.each do |saved_product| %>
+<div class="inline">
   <%#= saved_product %>
   <%= image_tag(saved_product[:image], :alt => saved_product[:alt], :size => "250x250", :name => saved_product[:name], :id => saved_product[:id]) %>
   <!--%= text_field_tag 'mencoat', @mencoat %-->
   <p id="text"><b><%= saved_product[:text] %></b></p>
+  <% if session[:saved_list].include?(saved_product[:name].to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: saved_product[:id], deselect: true), :id => 'save', method: :put %>
+      <% end %>
   <%= submit_tag 'Add to Cart', :id => 'add' %>
   <p>&nbsp;</p>
+</div>
 <% end %>
+
+<p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p>

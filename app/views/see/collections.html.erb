@@ -1,2 +1,546 @@
-<h1>See#collections</h1>
-<p>Find me in app/views/see/collections.html.erb</p>
+<center><h1>All Clothes Collections</h1></center>
+<div class="border"></div>
+<p>&nbsp;</p>
+<h1>Mens Clothing (11 Items)</h1>
+<p>&nbsp;</p>
+    <div class="divpop2">
+      <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Blue Mens Coat $29.99</b></p>
+      <% if session[:saved_list].include?(:mencoat.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :mencoat, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :mencoat), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+ <div class="divpop2">
+      <%= image_tag("RedHoodie.png", :alt => "Red Hoodie", :size => "250x250", :name => 'RedHoodie', :id => 'RedHoodie') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Red Hoodie $15.00</b></p>
+      <% if session[:saved_list].include?(:RedHoodie.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :RedHoodie, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :RedHoodie), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <!--<div class="divpop2">-->
+    <!--  <%#= image_tag("MensBlackShirt.png", :alt => "Mens Black Shirt", :size => "250x250", :name => 'MensBlackShirt', :id => 'MensBlackShirt') %>-->
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+    <!--  <p id="text"><b>Mens Black Shirt $29.99</b></p>-->
+    <!--  <%# if session[:saved_list].include?(:MensBlackShirt.to_s) %>-->
+    <!--    <%#= link_to 'Deselect', saved_list_path(id: :MensBlackShirt, deselect: true), :id => 'save', method: :put %>-->
+    <!--  <%# else %>-->
+    <!--    <#%= link_to 'Save', saved_list_path(id: :MensBlackShirt), :id => 'save', method: :put %>-->
+    <!--  <%# end %>-->
+    <!--  <%#= submit_tag 'Add to Cart', :id => 'add' %>-->
+    <!--</div>-->
+
+    <div class="divpop2">
+      <%= image_tag("MensBlueShirt.png", :alt => "Mens Blue Shirt", :size => "250x250", :name => 'MensBlueShirt', :id => 'MensBlueShirt') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Mens Blue Shirt $29.99</b></p>
+      <% if session[:saved_list].include?(:MensBlueShirt.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :MensBlueShirt, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :MensBlueShirt), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("MensCheckerShirt.png", :alt => "Mens Checker Shirt", :size => "250x250", :name => 'MensCheckerShirt', :id => 'MensCheckerShirt') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Mens Checker Shirt $29.99</b></p>
+      <% if session[:saved_list].include?(:MensCheckerShirt.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :MensCheckerShirt, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :MensCheckerShirt), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+<br><br>
+
+<div class="divpop2">
+      <%= image_tag("MensLeatherJacket.png", :alt => "Mens Leather Jacket", :size => "250x250", :name => 'MensLeatherJacket', :id => 'MensLeatherJacket') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Mens Leather Jacket $29.99</b></p>
+      <% if session[:saved_list].include?(:MensLeatherJacket.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :MensLeatherJacket, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :MensLeatherJacket), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("MensPants.png", :alt => "Mens Pants", :size => "250x250", :name => 'MensPants', :id => 'MensPants') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Mens Pants $29.99</b></p>
+      <% if session[:saved_list].include?(:MensPants.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :MensPants, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :MensPants), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("MensSuit.png", :alt => "Mens Suit", :size => "250x250", :name => 'MensSuit', :id => 'MensSuit') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Mens Suit $29.99</b></p>
+      <% if session[:saved_list].include?(:MensSuit.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :MensSuit, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :MensSuit), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("MensWatch.png", :alt => "Mens Watch", :size => "250x250", :name => 'MensWatch', :id => 'MensWatch') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Mens Watch $29.99</b></p>
+      <% if session[:saved_list].include?(:MensWatch.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :MensWatch, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :MensWatch), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <br><br>
+
+       <div class="divpop2">
+      <%= image_tag("newins3.png", :alt => "Mens Yellow Jumper", :size => "250x250", :name => 'newins3', :id => 'newins3') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Mens Yellow Jumper $29.99</b></p>
+      <% if session[:saved_list].include?(:newins3.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins3, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins3), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("newins4.png", :alt => "Mens Navy Pant", :size => "250x250", :name => 'newins4', :id => 'newins4') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Mens Navy Pant $29.99</b></p>
+      <% if session[:saved_list].include?(:newins4.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins4, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins4), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("newins7.png", :alt => "Mens Sweater", :size => "250x250", :name => 'newins7', :id => 'newins7') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Mens Sweater $29.99</b></p>
+      <% if session[:saved_list].include?(:newins7.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins7, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins7), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+    <p>&nbsp;</p>
+     <p>&nbsp;</p>
+<div class="border"></div>
+<p>&nbsp;</p>
+    <h1>Womens Clothing | Collection (11 Items)</h1>
+<p>&nbsp;</p>
+    <div class="divpop2">
+      <%= image_tag("RedWomenCoat.png", :alt => "Red Coat", :size => "250x250", :name => 'RedWomenCoat', :id => 'RedWomenCoat') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Red Womens Coat $29.99</b></p>
+      <% if session[:saved_list].include?(:RedWomenCoat.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :RedWomenCoat, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :RedWomenCoat), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("womensWatch.png", :alt => "Watch", :size => "250x250", :name => 'womensWatch', :id => 'womensWatch') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Womens Watch $29.99</b></p>
+      <% if session[:saved_list].include?(:womensWatch.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :womensWatch, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :womensWatch), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("pinkGirlsJacket.png", :alt => "Pink Jacket", :size => "250x250", :name => 'pinkGirlsJacket', :id => 'pinkGirlsJacket') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Pink Girls Jacket $29.99</b></p>
+      <% if session[:saved_list].include?(:pinkGirlsJacket.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :pinkGirlsJacket, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :pinkGirlsJacket), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("RedWomensPant.png", :alt => "Red Pants", :size => "250x250", :name => 'RedWomensPant', :id => 'RedWomensPant') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Red Womens Pant $29.99</b></p>
+      <% if session[:saved_list].include?(:RedWomensPant.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :RedWomensPant, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :RedWomensPant), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+<br><br>
+
+<div class="divpop2">
+      <%= image_tag("womensBlueDress.png", :alt => "Blue Dress", :size => "250x250", :name => 'womensBlueDress', :id => 'womensBlueDress') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Womens Blue Dress $29.99</b></p>
+      <% if session[:saved_list].include?(:womensBlueDress.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :womensBlueDress, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :womensBlueDress), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("womenscoat.png", :alt => "coat image", :size => "250x250", :name => 'womenscoat', :id => 'womenscoat') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Yellow Womens Coat $29.99</b></p>
+      <% if session[:saved_list].include?(:womenscoat.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :womenscoat, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :womenscoat), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("RedWomenDress.png", :alt => "Red Dress", :size => "250x250", :name => 'RedWomenDress', :id => 'RedWomenDress') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Red Womens Dress $29.99</b></p>
+      <% if session[:saved_list].include?(:RedWomenDress.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :RedWomenDress, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :RedWomenDress), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("BlueHeels.png", :alt => "Blue Heels", :size => "250x250", :name => 'BlueHeels', :id => 'BlueHeels') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Blue Heels $29.99</b></p>
+      <% if session[:saved_list].include?(:BlueHeels.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :BlueHeels, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :BlueHeels), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+    <br><br>
+<div class="divpop2">
+      <%= image_tag("newins1.png", :alt => "coat image", :size => "250x250", :name => 'newins1', :id => 'newins1') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Womens Blue Jumper $29.99</b></p>
+      <% if session[:saved_list].include?(:newins1.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins1, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins1), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("newins2.png", :alt => "coat image", :size => "250x250", :name => 'newins2', :id => 'newins2') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Womens Leather Jacket $29.99</b></p>
+      <% if session[:saved_list].include?(:newins2.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins2, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins2), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("newins8.png", :alt => "Yellow Womens Dress", :size => "250x250", :name => 'newins8', :id => 'newins8') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Yellow Womens Dress $29.99</b></p>
+      <% if session[:saved_list].include?(:newins8.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins8newins8, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins8), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+    <p>&nbsp;</p>
+     <p>&nbsp;</p>
+<div class="border"></div>
+<p>&nbsp;</p>
+<h1>Kids Clothing | Collection (10 Items)</h1>
+<p>&nbsp;</p>
+    <div class="divpop2">
+      <%= image_tag("KidsBlackDress.png", :alt => "Kids Black Dress", :size => "250x250", :name => 'KidsBlackDress', :id => 'KidsBlackDress') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Kids Black Dress $29.99</b></p>
+      <% if session[:saved_list].include?(:KidsBlackDress.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :KidsBlackDress, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :KidsBlackDress), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("KidsJacket.png", :alt => "Kids Jacket", :size => "250x250", :name => 'KidsJacket', :id => 'KidsJacket') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Kids Jacket $29.99</b></p>
+      <% if session[:saved_list].include?(:KidsJacket.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :KidsJacket, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :KidsJacket), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("KidsJumpers.png", :alt => "Kids Jumpers", :size => "250x250", :name => 'KidsJumpers', :id => 'KidsJumpers') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Kids Jumpers $29.99</b></p>
+      <% if session[:saved_list].include?(:KidsJumpers.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :KidsJumpers, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :KidsJumpers), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("KidsPinkSkirt.png", :alt => "Kids Pink Skirt", :size => "250x250", :name => 'KidsPinkSkirt', :id => 'KidsPinkSkirt') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Kids Pink Skirt $29.99</b></p>
+      <% if session[:saved_list].include?(:KidsPinkSkirt.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :KidsPinkSkirt, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :KidsPinkSkirt), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+<br><br>
+
+<div class="divpop2">
+      <%= image_tag("KidsRedDress.png", :alt => "Kids Red Dress", :size => "250x250", :name => 'KidsRedDress', :id => 'KidsRedDress') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Kids Red Dress $29.99</b></p>
+      <% if session[:saved_list].include?(:KidsRedDress.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :KidsRedDress, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :KidsRedDress), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("KidsShirt.png", :alt => "Kids Shirt", :size => "250x250", :name => 'KidsShirt', :id => 'KidsShirt') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Kids Shirt $29.99</b></p>
+      <% if session[:saved_list].include?(:KidsShirt.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :KidsShirt, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :KidsShirt), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("KidsShoes.png", :alt => "Kids Shoes", :size => "250x250", :name => 'KidsShoes', :id => 'KidsShoes') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Kids Shoes $29.99</b></p>
+      <% if session[:saved_list].include?(:KidsShoes.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :KidsShoes, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :KidsShoes), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("KidsJeans.png", :alt => "Kids Jeans", :size => "250x250", :name => 'KidsJeans', :id => 'KidsJeans') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Kids Jeans $29.99</b></p>
+      <% if session[:saved_list].include?(:KidsJeans.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :KidsJeans, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :KidsJeans), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+<br><br>
+<div class="divpop2">
+      <%= image_tag("newins5.png", :alt => "Yellow Kids Shirt", :size => "250x250", :name => 'newins5', :id => 'newins5') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Yellow Kids Shirt $29.99</b></p>
+      <% if session[:saved_list].include?(:newins5.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins5, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins5), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("newins6.png", :alt => "Green Kids Shorts", :size => "250x250", :name => 'newins6', :id => 'newins6') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Green Kids Shorts $29.99</b></p>
+      <% if session[:saved_list].include?(:newins6.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins6, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins6), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+        <p>&nbsp;</p>
+     <p>&nbsp;</p>
+<div class="border"></div>
+<p>&nbsp;</p>
+
+<h1>New Ins | Collection (8 Items)</h1>
+
+<p>&nbsp;</p>
+    <div class="divpop2">
+      <%= image_tag("newins1.png", :alt => "coat image", :size => "250x250", :name => 'newins1', :id => 'newins1') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Womens Blue Jumper $29.99</b></p>
+      <% if session[:saved_list].include?(:newins1.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins1, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins1), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("newins2.png", :alt => "coat image", :size => "250x250", :name => 'newins2', :id => 'newins2') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Womens Leather Jacket $29.99</b></p>
+      <% if session[:saved_list].include?(:newins2.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins2, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins2), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("newins3.png", :alt => "Mens Yellow Jumper", :size => "250x250", :name => 'newins3', :id => 'newins3') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Mens Yellow Jumper $29.99</b></p>
+      <% if session[:saved_list].include?(:newins3.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins3, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins3), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("newins4.png", :alt => "Mens Navy Pant", :size => "250x250", :name => 'newins4', :id => 'newins4') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Mens Navy Pant $29.99</b></p>
+      <% if session[:saved_list].include?(:newins4.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins4, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins4), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+<br><br>
+
+<div class="divpop2">
+      <%= image_tag("newins5.png", :alt => "Yellow Kids Shirt", :size => "250x250", :name => 'newins5', :id => 'newins5') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Yellow Kids Shirt $29.99</b></p>
+      <% if session[:saved_list].include?(:newins5.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins5, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins5), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("newins6.png", :alt => "Green Kids Shorts", :size => "250x250", :name => 'newins6', :id => 'newins6') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Green Kids Shorts $29.99</b></p>
+      <% if session[:saved_list].include?(:newins6.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins6, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins6), :id => 'save', method: :put %>
+      <% end %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("newins7.png", :alt => "Mens Sweater", :size => "250x250", :name => 'newins7', :id => 'newins7') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Mens Sweater $29.99</b></p>
+      <% if session[:saved_list].include?(:newins7.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins7, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins7), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+
+    <div class="divpop2">
+      <%= image_tag("newins8.png", :alt => "Yellow Womens Dress", :size => "250x250", :name => 'newins8', :id => 'newins8') %>
+      <!--%= text_field_tag 'mencoat', @mencoat %-->
+      <p id="text"><b>Yellow Womens Dress $29.99</b></p>
+      <% if session[:saved_list].include?(:newins8.to_s) %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins8newins8, deselect: true), :id => 'save', method: :put %>
+      <% else %>
+        <%= link_to 'Save', saved_list_path(id: :newins8), :id => 'save', method: :put %>
+      <% end %>
+      <%#= submit_tag 'Save', :id => 'save' %>
+      <%= submit_tag 'Add to Cart', :id => 'add' %>
+    </div>
+

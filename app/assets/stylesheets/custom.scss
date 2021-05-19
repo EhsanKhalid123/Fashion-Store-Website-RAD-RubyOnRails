@@ -43,7 +43,7 @@ p {
   letter-spacing: -1px;
   float: left;
   margin-right: 10px;
-  padding-top: 9px;
+  padding-top: 20px;
   font-size: 2.2em;
   color: #fff;
 
@@ -131,6 +131,11 @@ footer ul li {
     padding: 10px 10px;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+    color: #9affe3;
+    font-size: 15px;
+}
+
 .center jumbotron > btn btn-lg btn-primary > a {
   color:red;
 }
@@ -144,7 +149,11 @@ footer ul li {
     // width: 0%;
     margin: 40px;
     text-align: center;
-    border: 6rem solid #555555
+    border: 6rem solid #555555;
+}
+
+a > .collections1 {
+    background-color: #fff;
 }
 
 // .collections1:hover {
@@ -203,3 +212,30 @@ footer ul li {
   height:2px;
   width:100%;
 }
+
+.newsletter {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .newsletter {
+    margin-top: 30%;
+  }
+
+  .footer{
+    margin-top: 30%;
+  }
+
+}
+
+.inline {
+  float: left;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+

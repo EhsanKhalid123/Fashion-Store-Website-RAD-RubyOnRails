@@ -1,4 +1,13 @@
-<<<<<<< HEAD
+Name: Ehsan Khalid,  student number: s3838975
+Highest Level Attempted: CR
+
+Ehsan Khalid:
+Made the Design: 2 Days
+Made The Functionalities: 5 Days
+
+
+Heroku deployment URL and the last Heroku deployment log
+
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -23,6 +32,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-=======
-# RAD2021_s3838975_s3849223
->>>>>>> 03e934fb63a3c9f961c08793bb3021e9459c3627

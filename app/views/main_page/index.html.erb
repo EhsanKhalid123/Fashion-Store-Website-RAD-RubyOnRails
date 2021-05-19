@@ -15,17 +15,20 @@
 <center>
     <div class="divpop1">
       <% if session[:saved_list].include?(:mencoat.to_s) %>
-      <%= link_to 'Deselect', saved_list_path(id: :mencoat, deselect: true), :id => 'save', method: :put %>
-        $imagesArray = ["mencoat.png","womenscoat.png","pinkGirlsJacket.png","RedHoodie.png"]
-        imagesArray.each do |item|
-        puts item
-        end
+        <%= image_tag("newins1.png", :alt => "coat image", :size => "250x250", :name => 'newins1', :id => 'newins1') %>
+        <%= link_to 'Save', saved_list_path(id: :newins1), :id => 'save', method: :put %>
+        <% if session[:saved_list].include?(:newins1.to_s) %>
+          <%= image_tag("newins2.png", :alt => "coat image", :size => "250x250", :name => 'newins2', :id => 'newins2') %>
+          <%= link_to 'Save', saved_list_path(id: :newins2), :id => 'save', method: :put %>
+          <% end %>
+      <%#= link_to 'Deselect', saved_list_path(id: :mencoat, deselect: true), :id => 'save', method: :put %>
+        <%#= imagesArray = ["mencoat","womenscoat","pinkGirlsJacket","RedHoodie"] %>
+        <%#=imagesArray.each do |item| %>
+          <%#=puts item %>
+        <%# end %>
       <% else %>
-      $imagesArray = ["mencoat.png","womenscoat.png","pinkGirlsJacket.png","RedHoodie.png"]
-        imagesArray.each do |item|
-        puts item
-        end
-        <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
+      <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
+        <%#= image_tag(saved_product[:image], :alt => saved_product[:alt], :size => "250x250", :name => saved_product[:name], :id => saved_product[:id]) %>
         <p id="text"><b>Blue Mens Coat $29.99</b></p>
         <%= link_to 'Save', saved_list_path(id: :mencoat), :id => 'save', method: :put %>
       <% end %>
@@ -41,6 +44,7 @@
       <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Blue Mens Coat $29.99</b></p>
+      <center><p>Popularity Score: 10/10</p></center>
       <% if session[:saved_list].include?(:mencoat.to_s) %>
         <%= link_to 'Deselect', saved_list_path(id: :mencoat, deselect: true), :id => 'save', method: :put %>
       <% else %>
@@ -53,6 +57,7 @@
       <%= image_tag("womenscoat.png", :alt => "coat image", :size => "250x250", :name => 'womenscoat', :id => 'womenscoat') %>
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Yellow Womens Coat $29.99</b></p>
+      <center><p>Popularity Score: 9/10</p></center>
       <% if session[:saved_list].include?(:womenscoat.to_s) %>
         <%= link_to 'Deselect', saved_list_path(id: :womenscoat, deselect: true), :id => 'save', method: :put %>
       <% else %>
@@ -64,7 +69,8 @@
     <div class="divpop2">
       <%= image_tag("pinkGirlsJacket.png", :alt => "coat image", :size => "250x250", :name => 'pinkGirlsJacket', :id => 'pinkGirlsJacket') %>
       <!--%= text_field_tag 'mencoat', @mencoat %-->
-      <p id="text"><b>Pink Girls Jacket $29.99</b></p>
+      <p id="text"><b>Pink Girls Jacket $15.00</b></p>
+      <center><p>Popularity Score: 7/10</p></center>
       <% if session[:saved_list].include?(:pinkGirlsJacket.to_s) %>
         <%= link_to 'Deselect', saved_list_path(id: :pinkGirlsJacket, deselect: true), :id => 'save', method: :put %>
       <% else %>
@@ -77,7 +83,8 @@
     <div class="divpop2">
       <%= image_tag("RedHoodie.png", :alt => "coat image", :size => "250x250", :name => 'RedHoodie', :id => 'RedHoodie') %>
       <!--%= text_field_tag 'mencoat', @mencoat %-->
-      <p id="text"><b>Red Hoodie $29.99</b></p>
+      <p id="text"><b>Red Hoodie $15.00</b></p>
+      <center><p>Popularity Score: 8/10</p></center>
       <% if session[:saved_list].include?(:RedHoodie.to_s) %>
         <%= link_to 'Deselect', saved_list_path(id: :RedHoodie, deselect: true), :id => 'save', method: :put %>
       <% else %>
@@ -89,24 +96,24 @@
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
 <div class="border"></div>
-<h2 style="font-size:30px";>Collections</h2>
-<a class="collections1" href="men">Men
+<center><h2 style="font-size:30px";>Collections</h2></center>
+<a class="collections1" href="men">Men <br> 11 Items
     <!--<div class="collections1">-->
       <%#= link_to 'Men', men_url%>
 
     <!--</div>-->
 </a>
 
-<a class="collections1" href="women">Women
+<a class="collections1" href="women">Women <br> 11 Items
     <!--<div class="collections1">-->
       <%#= link_to 'Women', women_url%>
 
     <!--</div>-->
 </a>
-<a class="collections1" href="kids">Kids
+<a class="collections1" href="kids">Kids <br> 10 Items
 
 </a>
-<a class="collections1" href="new">New-ins
+<a class="collections1" href="new">New-ins <br> 8 Items
 
 </a>
     <div class="collectionsAll">
@@ -116,3 +123,17 @@
 </div>
 
 
+
+<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+
+<center>
+<div class="newsletter">
+  <div class="border"></div>
+    <h2 style="font-size:30px";>Newsletter</h2>
+    <p>Sign up with our newsletter</p>
+    <p>&nbsp;</p>
+    <%= text_field_tag 'newsletterEmail', @newsletterEmail %>
+    <%= submit_tag 'Sign Up', :id => 'newsletterSignUp' %>
+
+</div>
+</center>
