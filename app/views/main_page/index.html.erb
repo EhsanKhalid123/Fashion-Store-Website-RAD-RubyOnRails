@@ -14,25 +14,10 @@
 
 <center>
     <div class="divpop1">
-      <% if session[:saved_list].include?(:mencoat.to_s) %>
-        <%= image_tag("newins1.png", :alt => "coat image", :size => "250x250", :name => 'newins1', :id => 'newins1') %>
-        <%= link_to 'Save', saved_list_path(id: :newins1), :id => 'save', method: :put %>
-        <% if session[:saved_list].include?(:newins1.to_s) %>
-          <%= image_tag("newins2.png", :alt => "coat image", :size => "250x250", :name => 'newins2', :id => 'newins2') %>
-          <%= link_to 'Save', saved_list_path(id: :newins2), :id => 'save', method: :put %>
-          <% end %>
-      <%#= link_to 'Deselect', saved_list_path(id: :mencoat, deselect: true), :id => 'save', method: :put %>
-        <%#= imagesArray = ["mencoat","womenscoat","pinkGirlsJacket","RedHoodie"] %>
-        <%#=imagesArray.each do |item| %>
-          <%#=puts item %>
-        <%# end %>
-      <% else %>
-      <%= image_tag("mencoat.png", :alt => "coat image", :size => "250x250", :name => 'mencoat', :id => 'mencoat') %>
-        <%#= image_tag(saved_product[:image], :alt => saved_product[:alt], :size => "250x250", :name => saved_product[:name], :id => saved_product[:id]) %>
-        <p id="text"><b>Blue Mens Coat $29.99</b></p>
-        <%= link_to 'Save', saved_list_path(id: :mencoat), :id => 'save', method: :put %>
-      <% end %>
-      <%= submit_tag 'Add to Cart', :id => 'add' %>
+      <% product = @random_unsaved_product %>
+      <%= image_tag(product[:image], :alt => product[:alt], :size => "250x250", :name => product[:name], :id => product[:id]) %>
+        <p id="text" style="margin-right: 20px;" ><b><%=product[:text]%></b></p>
+      <%= link_to 'Save', saved_list_path(id: product[:id], redirect_to: :main_page), :id => 'save', method: :put, :style => 'margin-right: 85px;'%>
     </div>
 </center>
 <p>&nbsp</p>
@@ -50,7 +35,7 @@
       <% else %>
         <%= link_to 'Save', saved_list_path(id: :mencoat), :id => 'save', method: :put %>
       <% end %>
-      <%= submit_tag 'Add to Cart', :id => 'add' %>
+      <%#= submit_tag 'Add to Cart', :id => 'add' %>
     </div>
 
     <div class="divpop2">
@@ -63,7 +48,7 @@
       <% else %>
         <%= link_to 'Save', saved_list_path(id: :womenscoat), :id => 'save', method: :put %>
       <% end %>
-      <%= submit_tag 'Add to Cart', :id => 'add' %>
+      <%#= submit_tag 'Add to Cart', :id => 'add' %>
     </div>
 
     <div class="divpop2">
@@ -77,7 +62,7 @@
         <%= link_to 'Save', saved_list_path(id: :pinkGirlsJacket), :id => 'save', method: :put %>
       <% end %>
       <%#= submit_tag 'Save', :id => 'save' %>
-      <%= submit_tag 'Add to Cart', :id => 'add' %>
+      <%#= submit_tag 'Add to Cart', :id => 'add' %>
     </div>
 
     <div class="divpop2">
@@ -91,7 +76,7 @@
         <%= link_to 'Save', saved_list_path(id: :RedHoodie), :id => 'save', method: :put %>
       <% end %>
       <%#= submit_tag 'Save', :id => 'save' %>
-      <%= submit_tag 'Add to Cart', :id => 'add' %>
+      <%#= submit_tag 'Add to Cart', :id => 'add' %>
     </div>
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
@@ -131,9 +116,21 @@
   <div class="border"></div>
     <h2 style="font-size:30px";>Newsletter</h2>
     <p>Sign up with our newsletter</p>
-    <p>&nbsp;</p>
-    <%= text_field_tag 'newsletterEmail', @newsletterEmail %>
-    <%= submit_tag 'Sign Up', :id => 'newsletterSignUp' %>
 
+    <%= form_tag action: 'index' do %>
+    <%= email_field_tag 'newsletterEmail', @newsletterEmail, :placeholder=>"Type an email address",:pattern=>"^([\w+-.%]+@[\w-.]+\.[A-Za-z]{2,4},*[\W]*)+$",:multiple => true, :required => true %>
+    <%= submit_tag 'Sign Up', :id => 'newsletterSignUp' %>
+    <%#= email_field_tag 'to[]','' ,:placeholder=>"Type an email address",:pattern=>"^([\w+-.%]+@[\w-.]+\.[A-Za-z]{2,4},*[\W]*)+$",:multiple => true%>
+    <% end %>
+
+    <h2><%= @newsletterEmail %></h2>
+
+<!--<%#= form_tag 'index' do%>-->
+<!--Email : </br><%#= text_field_tag 'email', ''%></br>-->
+<!--subject: </br><%#= text_field_tag 'subject', ''%></br>-->
+<!--Body:<%#= text_area_tag 'body', ''%>-->
+<!--<%#= submit_tag "submit",:value => "submit"%>-->
+<!--<#%end%>-->
+<!-- <%#=@body%>-->
 </div>
 </center>

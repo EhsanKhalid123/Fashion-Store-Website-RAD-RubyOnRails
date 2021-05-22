@@ -5,9 +5,9 @@
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Blue Mens Coat $29.99</b></p>
       <% if session[:saved_list].include?(:mencoat.to_s) %>
-        <%= link_to 'Deselect', saved_list_path(id: :mencoat, deselect: true), :id => 'save', method: :put %>
+        <%= link_to 'Deselect', saved_list_path(id: :mencoat, deselect: true, redirect_to: :men), :id => 'save', method: :put %>
       <% else %>
-        <%= link_to 'Save', saved_list_path(id: :mencoat), :id => 'save', method: :put %>
+        <%= link_to 'Save', saved_list_path(id: :mencoat, redirect_to: :men), :id => 'save', method: :put %>
       <% end %>
       <%= submit_tag 'Add to Cart', :id => 'add' %>
     </div>
@@ -17,9 +17,9 @@
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Red Hoodie $15.00</b></p>
       <% if session[:saved_list].include?(:RedHoodie.to_s) %>
-        <%= link_to 'Deselect', saved_list_path(id: :RedHoodie, deselect: true), :id => 'save', method: :put %>
+        <%= link_to 'Deselect', saved_list_path(id: :RedHoodie, deselect: true, redirect_to: :men), :id => 'save', method: :put %>
       <% else %>
-        <%= link_to 'Save', saved_list_path(id: :RedHoodie), :id => 'save', method: :put %>
+        <%= link_to 'Save', saved_list_path(id: :RedHoodie, redirect_to: :men), :id => 'save', method: :put %>
       <% end %>
       <%= submit_tag 'Add to Cart', :id => 'add' %>
     </div>
@@ -29,9 +29,9 @@
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Mens Blue Shirt $20.00</b></p>
       <% if session[:saved_list].include?(:MensBlueShirt.to_s) %>
-        <%= link_to 'Deselect', saved_list_path(id: :MensBlueShirt, deselect: true), :id => 'save', method: :put %>
+        <%= link_to 'Deselect', saved_list_path(id: :MensBlueShirt, deselect: true, redirect_to: :men), :id => 'save', method: :put %>
       <% else %>
-        <%= link_to 'Save', saved_list_path(id: :MensBlueShirt), :id => 'save', method: :put %>
+        <%= link_to 'Save', saved_list_path(id: :MensBlueShirt, redirect_to: :men), :id => 'save', method: :put %>
       <% end %>
       <%#= submit_tag 'Save', :id => 'save' %>
       <%= submit_tag 'Add to Cart', :id => 'add' %>
@@ -42,9 +42,9 @@
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Mens Checker Shirt $20.00</b></p>
       <% if session[:saved_list].include?(:MensCheckerShirt.to_s) %>
-        <%= link_to 'Deselect', saved_list_path(id: :MensCheckerShirt, deselect: true), :id => 'save', method: :put %>
+        <%= link_to 'Deselect', saved_list_path(id: :MensCheckerShirt, deselect: true, redirect_to: :men), :id => 'save', method: :put %>
       <% else %>
-        <%= link_to 'Save', saved_list_path(id: :MensCheckerShirt), :id => 'save', method: :put %>
+        <%= link_to 'Save', saved_list_path(id: :MensCheckerShirt, redirect_to: :men), :id => 'save', method: :put %>
       <% end %>
       <%#= submit_tag 'Save', :id => 'save' %>
       <%= submit_tag 'Add to Cart', :id => 'add' %>
@@ -57,9 +57,9 @@
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Mens Leather Jacket $49.99</b></p>
       <% if session[:saved_list].include?(:MensLeatherJacket.to_s) %>
-        <%= link_to 'Deselect', saved_list_path(id: :MensLeatherJacket, deselect: true), :id => 'save', method: :put %>
+        <%= link_to 'Deselect', saved_list_path(id: :MensLeatherJacket, deselect: true, redirect_to: :men), :id => 'save', method: :put %>
       <% else %>
-        <%= link_to 'Save', saved_list_path(id: :MensLeatherJacket), :id => 'save', method: :put %>
+        <%= link_to 'Save', saved_list_path(id: :MensLeatherJacket, redirect_to: :men), :id => 'save', method: :put %>
       <% end %>
       <%= submit_tag 'Add to Cart', :id => 'add' %>
     </div>
@@ -69,9 +69,9 @@
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Mens Pants $10.00</b></p>
       <% if session[:saved_list].include?(:MensPants.to_s) %>
-        <%= link_to 'Deselect', saved_list_path(id: :MensPants, deselect: true), :id => 'save', method: :put %>
+        <%= link_to 'Deselect', saved_list_path(id: :MensPants, deselect: true, redirect_to: :men), :id => 'save', method: :put %>
       <% else %>
-        <%= link_to 'Save', saved_list_path(id: :MensPants), :id => 'save', method: :put %>
+        <%= link_to 'Save', saved_list_path(id: :MensPants, redirect_to: :men), :id => 'save', method: :put %>
       <% end %>
       <%= submit_tag 'Add to Cart', :id => 'add' %>
     </div>
@@ -81,9 +81,9 @@
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Mens Suit $120.00</b></p>
       <% if session[:saved_list].include?(:MensSuit.to_s) %>
-        <%= link_to 'Deselect', saved_list_path(id: :MensSuit, deselect: true), :id => 'save', method: :put %>
+        <%= link_to 'Deselect', saved_list_path(id: :MensSuit, deselect: true, redirect_to: :men), :id => 'save', method: :put %>
       <% else %>
-        <%= link_to 'Save', saved_list_path(id: :MensSuit), :id => 'save', method: :put %>
+        <%= link_to 'Save', saved_list_path(id: :MensSuit, redirect_to: :men), :id => 'save', method: :put %>
       <% end %>
       <%#= submit_tag 'Save', :id => 'save' %>
       <%= submit_tag 'Add to Cart', :id => 'add' %>
@@ -94,9 +94,9 @@
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Mens Watch $85.00</b></p>
       <% if session[:saved_list].include?(:MensWatch.to_s) %>
-        <%= link_to 'Deselect', saved_list_path(id: :MensWatch, deselect: true), :id => 'save', method: :put %>
+        <%= link_to 'Deselect', saved_list_path(id: :MensWatch, deselect: true, redirect_to: :men), :id => 'save', method: :put %>
       <% else %>
-        <%= link_to 'Save', saved_list_path(id: :MensWatch), :id => 'save', method: :put %>
+        <%= link_to 'Save', saved_list_path(id: :MensWatch, redirect_to: :men), :id => 'save', method: :put %>
       <% end %>
       <%#= submit_tag 'Save', :id => 'save' %>
       <%= submit_tag 'Add to Cart', :id => 'add' %>
@@ -109,9 +109,9 @@
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Mens Yellow Jumper $29.99</b></p>
       <% if session[:saved_list].include?(:newins3.to_s) %>
-        <%= link_to 'Deselect', saved_list_path(id: :newins3, deselect: true), :id => 'save', method: :put %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins3, deselect: true, redirect_to: :men), :id => 'save', method: :put %>
       <% else %>
-        <%= link_to 'Save', saved_list_path(id: :newins3), :id => 'save', method: :put %>
+        <%= link_to 'Save', saved_list_path(id: :newins3, redirect_to: :men), :id => 'save', method: :put %>
       <% end %>
       <%#= submit_tag 'Save', :id => 'save' %>
       <%= submit_tag 'Add to Cart', :id => 'add' %>
@@ -122,9 +122,9 @@
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Mens Navy Pant $15.00</b></p>
       <% if session[:saved_list].include?(:newins4.to_s) %>
-        <%= link_to 'Deselect', saved_list_path(id: :newins4, deselect: true), :id => 'save', method: :put %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins4, deselect: true, redirect_to: :men), :id => 'save', method: :put %>
       <% else %>
-        <%= link_to 'Save', saved_list_path(id: :newins4), :id => 'save', method: :put %>
+        <%= link_to 'Save', saved_list_path(id: :newins4, redirect_to: :men), :id => 'save', method: :put %>
       <% end %>
       <%#= submit_tag 'Save', :id => 'save' %>
       <%= submit_tag 'Add to Cart', :id => 'add' %>
@@ -135,9 +135,9 @@
       <!--%= text_field_tag 'mencoat', @mencoat %-->
       <p id="text"><b>Mens Sweater $20.00</b></p>
       <% if session[:saved_list].include?(:newins7.to_s) %>
-        <%= link_to 'Deselect', saved_list_path(id: :newins7, deselect: true), :id => 'save', method: :put %>
+        <%= link_to 'Deselect', saved_list_path(id: :newins7, deselect: true, redirect_to: :men), :id => 'save', method: :put %>
       <% else %>
-        <%= link_to 'Save', saved_list_path(id: :newins7), :id => 'save', method: :put %>
+        <%= link_to 'Save', saved_list_path(id: :newins7, redirect_to: :men), :id => 'save', method: :put %>
       <% end %>
       <%#= submit_tag 'Save', :id => 'save' %>
       <%= submit_tag 'Add to Cart', :id => 'add' %>
