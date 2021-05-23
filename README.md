@@ -1,4 +1,4 @@
-Name: Ehsan Khalid & Student number: s3838975  &  Name: Jay Verma & Student Number: s3849223
+Name: Ehsan Khalid & Student number: s3838975, Contributed 60% AND  Name: Jay Verma & Student Number: s3849223, Contributed 40%.  Contributions - 60:40
 Highest Level Attempted: PI
 
 * Ehsan Khalid:
@@ -10,13 +10,19 @@ Save List Functionality: 3 Days spent
 All Collections Page: 3 Hours spent
 Front Page Random Item Displays: 3 Hours spent
 Newsletter Functionality: 2 Days spent
+Testing: 2 Hours
+Discussion: 5 Hours
+Reading: 2 Hours
 
 * Jay Verma:
 Overall Design: 1 Day Spent
 Newsletter Functionality: 4 Hours spent
 Save List Functionality: 8 Hours spent
+Testing: 1 Hour
+Discussion: 5 Hours
 
 * HEROKU Deployment URL: https://shielded-refuge-92525.herokuapp.com/
+* Git Repository Name/Location: https://github.com/EhsanKhalid123/RAD2021_s3838975_s3849223/
 * AWS URL: https://1b229cde5d814704aa5df677fa8f532f.vfs.cloud9.us-east-1.amazonaws.com/
 
 * REFERENCES: https://sendgrid.com/docs/for-developers/sending-email/rubyonrails/
