@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   # get 'kids/clothing'
   # get 'main_page/index'
 
+  root 'main_page#index'
+  root to: "main_page#index"
+
   get 'home' => 'main_page#index'
   post 'home' => 'main_page#index'
   get 'kids' => 'kids#clothing'
