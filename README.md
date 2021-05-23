@@ -113,7 +113,7 @@ Discussion: 5 Hours
        Running: rake assets:precompile
        Yarn executable was not detected in the system.
        Download Yarn at https://yarnpkg.com/en/docs/install
-       Asset precompilation completed (1.67s)
+       Asset precompilation completed (1.66s)
        Cleaning assets
        Running: rake assets:clean
 -----> Detecting rails configuration
@@ -146,7 +146,7 @@ Discussion: 5 Hours
 -----> Compressing...
        Done: 100.5M
 -----> Launching...
-       Released v13
+       Released v16
        https://shielded-refuge-92525.herokuapp.com/ deployed to Heroku
 *
 *
