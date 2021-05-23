@@ -18,5 +18,9 @@ class MainPageController < ApplicationController
 
   end
 
+  def home
+
+  end
+
 
 end
