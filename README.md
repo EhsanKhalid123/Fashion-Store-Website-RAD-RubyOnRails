@@ -16,7 +16,7 @@ Overall Design: 1 Day Spent
 Newsletter Functionality: 4 Hours spent
 Save List Functionality: 8 Hours spent
 
-* HEROKU Deployment URL: https://shielded-refuge-92525.herokuapp.com/
+* HEROKU Deployment URL: https://shielded-refuge-92525.herokuapp.com/home
 * AWS URL: https://1b229cde5d814704aa5df677fa8f532f.vfs.cloud9.us-east-1.amazonaws.com/home
 
 * REFERENCES: https://sendgrid.com/docs/for-developers/sending-email/rubyonrails/
