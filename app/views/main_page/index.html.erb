@@ -118,19 +118,15 @@
     <p>Sign up with our newsletter</p>
 
     <%= form_tag action: 'index' do %>
-    <%= email_field_tag 'newsletterEmail', @newsletterEmail, :placeholder=>"Type an email address",:pattern=>"^([\w+-.%]+@[\w-.]+\.[A-Za-z]{2,4},*[\W]*)+$",:multiple => true, :required => true %>
+    <%= email_field_tag 'newsletterEmail', @newsletterEmail, :id => 'newsletterEmail' , :placeholder=>"Type an email address",:pattern=>"^([\w+-.%]+@[\w-.]+\.[A-Za-z]{2,4},*[\W]*)+$",:multiple => true, :required => true %>
     <%= submit_tag 'Sign Up', :id => 'newsletterSignUp' %>
     <%#= email_field_tag 'to[]','' ,:placeholder=>"Type an email address",:pattern=>"^([\w+-.%]+@[\w-.]+\.[A-Za-z]{2,4},*[\W]*)+$",:multiple => true%>
     <% end %>
 
-    <h2><%= @newsletterEmail %></h2>
+    <% if @newsletterEmail %>
+      <h2><%= @success %><%= @newsletterEmail %></h2>
+    <% else %>
+    <% end %>
 
-<!--<%#= form_tag 'index' do%>-->
-<!--Email : </br><%#= text_field_tag 'email', ''%></br>-->
-<!--subject: </br><%#= text_field_tag 'subject', ''%></br>-->
-<!--Body:<%#= text_area_tag 'body', ''%>-->
-<!--<%#= submit_tag "submit",:value => "submit"%>-->
-<!--<#%end%>-->
-<!-- <%#=@body%>-->
 </div>
 </center>

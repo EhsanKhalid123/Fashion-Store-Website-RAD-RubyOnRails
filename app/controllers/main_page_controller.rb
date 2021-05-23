@@ -9,8 +9,11 @@ class MainPageController < ApplicationController
     @name = params[:visitor_name]
 
     @newsletterEmail = params[:newsletterEmail]
-    # mail(to: @newsletterEmail, subject: 'Email From Online Fashion Store', body: "Test").deliver
-  UserNotifierMailer.send_signup_email(@user).deliver
+    @success = 'Email Has Been Sent Successfully To:'
+
+    # UserNotifierMailer.send_signup_email(@user).deliver
+    UserNotifierMailer.send_signup_email(@newsletterEmail).deliver
+
   end
 
 

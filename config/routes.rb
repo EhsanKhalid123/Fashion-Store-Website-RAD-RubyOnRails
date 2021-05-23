@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
 
-  resources :users
   resources :products
   # get 'see/collections'
   # get 'save/list'
