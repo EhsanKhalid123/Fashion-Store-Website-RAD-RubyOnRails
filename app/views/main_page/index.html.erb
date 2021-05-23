@@ -1,3 +1,7 @@
+ <% if @newsletterEmail %>
+      <h2><%= @success %><%= @newsletterEmail %></h2>
+    <% else %>
+    <% end %>
 
 <div class="center jumbotron">
     <h1>Online Fashion Store</h1>
@@ -118,15 +122,11 @@
     <p>Sign up with our newsletter</p>
 
     <%= form_tag action: 'index' do %>
-    <%= email_field_tag 'newsletterEmail', @newsletterEmail, :id => 'newsletterEmail' , :placeholder=>"Type an email address",:pattern=>"^([\w+-.%]+@[\w-.]+\.[A-Za-z]{2,4},*[\W]*)+$",:multiple => true, :required => true %>
+    <%= email_field_tag 'newsletterEmail', @newsletterEmail, :placeholder=>"Type an email address",:pattern=>"^([\w+-.%]+@[\w-.]+\.[A-Za-z]{2,4},*[\W]*)+$",:multiple => true, :required => true %>
     <%= submit_tag 'Sign Up', :id => 'newsletterSignUp' %>
     <%#= email_field_tag 'to[]','' ,:placeholder=>"Type an email address",:pattern=>"^([\w+-.%]+@[\w-.]+\.[A-Za-z]{2,4},*[\W]*)+$",:multiple => true%>
     <% end %>
 
-    <% if @newsletterEmail %>
-      <h2><%= @success %><%= @newsletterEmail %></h2>
-    <% else %>
-    <% end %>
 
 </div>
 </center>

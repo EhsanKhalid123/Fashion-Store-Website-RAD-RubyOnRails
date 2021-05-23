@@ -15,7 +15,7 @@
   <% if session[:saved_list].include?(saved_product[:name].to_s) %>
         <%= link_to 'Deselect', saved_list_path(id: saved_product[:id], deselect: true, redirect_to: :saved_list), :id => 'save', method: :put %>
       <% end %>
-  <%= submit_tag 'Add to Cart', :id => 'add' %>
+  <%#= submit_tag 'Add to Cart', :id => 'add' %>
   <p>&nbsp;</p>
 </div>
 <% end %>

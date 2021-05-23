@@ -6,8 +6,8 @@ class UserNotifierMailer < ApplicationMailer
     # @user = 's3838975@student.rmit.edu.au'
     # mail( :to => @user, :subject => 'Online Fashion Store Newsletter Subscription' )
 
-    @newsletterEmail = 's3838975@student.rmit.edu.au'
-    mail( :to => @newsletterEmail, :subject => 'Test' )
+    @newsletterEmail = $newsletterEmail
+    mail( :to => @newsletterEmail, :subject => 'Online Fashion Store Newsletter Subscription' )
   end
 
 end

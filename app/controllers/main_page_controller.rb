@@ -9,7 +9,9 @@ class MainPageController < ApplicationController
     @name = params[:visitor_name]
 
     @newsletterEmail = params[:newsletterEmail]
-    @success = 'Email Has Been Sent Successfully To:'
+    @success = 'Email Has Been Sent Successfully To: '
+
+    $newsletterEmail = @newsletterEmail
 
     # UserNotifierMailer.send_signup_email(@user).deliver
     UserNotifierMailer.send_signup_email(@newsletterEmail).deliver
