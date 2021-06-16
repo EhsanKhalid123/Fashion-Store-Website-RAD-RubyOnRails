@@ -14,7 +14,12 @@ class MainPageController < ApplicationController
     $newsletterEmail = @newsletterEmail
 
     # UserNotifierMailer.send_signup_email(@user).deliver
-    UserNotifierMailer.send_signup_email(@newsletterEmail).deliver
+
+    if @newsletterEmail.present?
+      UserNotifierMailer.send_signup_email(@newsletterEmail).deliver!
+    else
+      UserNotifierMailer.send_signup_email(@newsletterEmail)
+    end
 
   end
 
