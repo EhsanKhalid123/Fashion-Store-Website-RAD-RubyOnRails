@@ -1,6 +1,8 @@
+An Online Fashion Store Website developed using Ruby on Rails on AWS Cloud 9 service.
+
 Developer: Ehsan Khalid 
 
-* Time Spent:
+Time Spent:
 Header: 2 Hours spent
 Footer: 2 Hours spent
 Designed Home Page: 4 Hours spent
