@@ -1,7 +1,6 @@
-Name: Ehsan Khalid & Student number: s3838975, Contributed 100%
-Highest Level Attempted: PI
+Developer: Ehsan Khalid 
 
-* Ehsan Khalid:
+* Time Spent:
 Header: 2 Hours spent
 Footer: 2 Hours spent
 Designed Home Page: 4 Hours spent
